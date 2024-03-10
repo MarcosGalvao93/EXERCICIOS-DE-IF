@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que pais que tu veio?</title>
+    <style>
+    body {background-color: rgb(245, 4, 4);
+        color: rgb(0, 0, 0);
+        font: normal 10pt Arial;}
+        </style>
+</head>
+<body> 
+    <h1>Que pais que tu é?</h1>
+    Qual o seu país de origem? <input type="text" id="txtpai"/> 
+    <input type="button" value="ok" onclick="nacionalidade()">
+    <div id="res">
+    </div>
+
+<script>
+function nacionalidade() {
+var txtp = document.getElementById('txtpai').value;
+var res = document.querySelector('div#res');
+var mensagem;       
+        if (txtp !== 'Brasil') {
+mensagem = `Você é de outro país`;
+        } else {
+            mensagem = `Bora beber!!`;
+        }
+        res.innerHTML = `<p>Você nasceu no(a) <strong>${txtp}</strong>.</p> <strong>${mensagem}</strong>`;
+
+    }
+</script>
+</body>
+</html>
